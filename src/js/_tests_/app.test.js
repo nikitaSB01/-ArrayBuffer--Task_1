@@ -1,51 +1,42 @@
 // прописать import все файлы JS
-import Character from '../Character';
 import Daemon from '../Daemon';
 import Magician from '../Magician';
+import MathCalc from '../MathCalc';
 // начать тесты
-
-const player = new Character('Niki', 'Daemon');
-
-test('class Character', () => {
-  expect(player).toEqual({
-    name: 'Niki',
-    type: 'Daemon',
-    health: 100,
-    level: 1,
-    attack: undefined,
-    defence: undefined,
-  });
-});
-
-test('Неверное имя', () => {
-  expect(() => new Character('R', 'Undead')).toThrow();
-});
-test('Неверный тип', () => {
-  expect(() => new Character('Ron', 'noType')).toThrow();
-});
-
-test('Верный ввод Daemon', () => {
-  const received = new Daemon('Ron', 'Daemon');
-  const expected = {
-    name: 'Ron',
-    type: 'Daemon',
-    health: 100,
-    level: 1,
-    attack: 10,
-    defence: 40,
+/* eslint-disable no-underscore-dangle */
+test('Проверка на создание Magician', () => {
+  const playMagician = new Magician('niki', 10, 20);
+  const result = {
+    distance: 20,
+    _attack: 0,
+    name: 'niki',
   };
-  expect(received).toEqual(expected);
+  expect(playMagician).toEqual(result);
+});
+test('Проверка на создание Daemon', () => {
+  const playDem = new Daemon('mik', 10, 20);
+  const result = {
+    distance: 20,
+    _attack: 0,
+    name: 'mik',
+  };
+  expect(playDem).toEqual(result);
+});
+//! // // //
+test('Проверка на set _stoned', () => {
+  const playDem = new MathCalc(100, 2);
+  playDem._attack = 100;
+  playDem.stoned = true;
+  /*  const result = {
+    distance: 20,
+    _attack: 0,
+    _stoned: true,
+  }; */
+  expect(playDem.attack).toEqual(85);
 });
 
-test('Верный ввод Magician', () => {
-  const received = new Magician('Ron', 'Magician');
-  const expected = {
-    name: 'Ron',
-    type: 'Magician',
-    health: 100,
-    level: 1,
-    attack: 10,
-    defence: 40,
-  };
-  expect(received).toEqual(expected);
+test('Проверка на get attack', () => {
+  const playDem = new MathCalc(10, 20);
+  const result = 0;
+  expect(playDem.attack).toEqual(result);
 });
