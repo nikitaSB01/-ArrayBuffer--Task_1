@@ -32,10 +32,5 @@ class MathCalc {
     }
   }
 }
-/* const playDem = new MathCalc(10, 20);
-playDem._attack = 100;
-playDem.stoned = true;
-console.log(playDem.attack);
- */
 
 export default MathCalc;

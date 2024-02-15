@@ -22,21 +22,24 @@ test('Проверка на создание Daemon', () => {
   };
   expect(playDem).toEqual(result);
 });
-//! // // //
+
 test('Проверка на set _stoned', () => {
   const playDem = new MathCalc(100, 2);
-  playDem._attack = 100;
   playDem.stoned = true;
-  /*  const result = {
-    distance: 20,
-    _attack: 0,
-    _stoned: true,
-  }; */
-  expect(playDem.attack).toEqual(85);
+  playDem.attack = 100;
+  const result = 85;
+  expect(playDem.attack).toEqual(result);
 });
 
 test('Проверка на get attack', () => {
   const playDem = new MathCalc(10, 20);
   const result = 0;
+  expect(playDem.attack).toEqual(result);
+});
+
+test('Проверка если атака больше 100', () => {
+  const playDem = new MathCalc(1000, 2);
+  playDem.attack = 1000;
+  const result = 100;
   expect(playDem.attack).toEqual(result);
 });
