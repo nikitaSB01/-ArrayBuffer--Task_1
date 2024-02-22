@@ -1,8 +1,25 @@
 /* eslint-disable no-underscore-dangle */
 class MathCalc {
-  constructor(attack, distance) {
+  constructor(name, distance) {
+    this.name = name;
     this.distance = distance;
-    this.attack = attack;
+
+    this.attack = 0;
+    this.stoned = false;
+  }
+
+  set attack(value) {
+    this._attack = value;
+  }
+
+  get attack() {
+    if (this.distance > 1 && this.distance <= 5) {
+      if (this.stoned) {
+        return this._attack * (1 - 0.1 * (this.distance - 1)) - Math.log2(this.distance) * 5;
+      }
+      return this._attack * (1 - 0.1 * (this.distance - 1));
+    }
+    return this._attack;
   }
 
   set stoned(value) {
@@ -10,27 +27,14 @@ class MathCalc {
   }
 
   get stoned() {
+    //  return this.attack;
     return this._stoned;
   }
-
-  get attack() {
-    return this._attack;
-  }
-
-  set attack(value) {
-    let calc = value * (1 - (this.distance - 1) / 10);
-    if (this.stoned) {
-      calc -= Math.log2(this.distance) * 5;
-    }
-
-    if (calc > 100) {
-      this._attack = 100;
-    } else if (calc > 0) {
-      this._attack = Math.floor(calc);
-    } else {
-      this._attack = 0;
-    }
-  }
 }
+
+/* const pok = new MathCalc('niki', 2);
+pok.attack = 100;
+pok.stoned = true;
+console.log(pok.attack); */
 
 export default MathCalc;

@@ -3,43 +3,47 @@ import Daemon from '../Daemon';
 import Magician from '../Magician';
 import MathCalc from '../MathCalc';
 // начать тесты
-/* eslint-disable no-underscore-dangle */
 test('Проверка на создание Magician', () => {
-  const playMagician = new Magician('niki', 10, 20);
+  const playMagician = new Magician('niki', 2);
   const result = {
-    distance: 20,
-    _attack: 0,
     name: 'niki',
+    distance: 2,
+    _attack: 0,
+    _stoned: false,
   };
   expect(playMagician).toEqual(result);
 });
+
 test('Проверка на создание Daemon', () => {
-  const playDem = new Daemon('mik', 10, 20);
+  const playDem = new Daemon('mik', 3);
   const result = {
-    distance: 20,
-    _attack: 0,
     name: 'mik',
+    distance: 3,
+    _attack: 0,
+    _stoned: false,
   };
   expect(playDem).toEqual(result);
 });
 
-test('Проверка на set _stoned', () => {
-  const playDem = new MathCalc(100, 2);
+//! /// /// /// /// /// /// /// /// /// /// /// ///
+test('Проверка на значение атаки при stoned: true', () => {
+  const playDem = new MathCalc('MIKI', 2);
   playDem.stoned = true;
   playDem.attack = 100;
   const result = 85;
   expect(playDem.attack).toEqual(result);
 });
 
-test('Проверка на get attack', () => {
-  const playDem = new MathCalc(10, 20);
-  const result = 0;
+test('Проверка на get attack с значением stoned: false', () => {
+  const playDem = new MathCalc('MOKI', 2);
+  playDem.attack = 100;
+  const result = 90;
   expect(playDem.attack).toEqual(result);
 });
 
 test('Проверка если атака больше 100', () => {
-  const playDem = new MathCalc(1000, 2);
+  const playDem = new MathCalc('giga', 20);
   playDem.attack = 1000;
-  const result = 100;
+  const result = 1000;
   expect(playDem.attack).toEqual(result);
 });

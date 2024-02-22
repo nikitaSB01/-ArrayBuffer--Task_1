@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1708013754679" clover="3.2.0">
-  <project timestamp="1708013754680" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7" elements="30" coveredelements="30" complexity="0" loc="17" ncloc="17" packages="1" files="3" classes="3"/>
+<coverage generated="1708597798882" clover="3.2.0">
+  <project timestamp="1708597798882" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7" elements="31" coveredelements="31" complexity="0" loc="18" ncloc="18" packages="1" files="3" classes="3"/>
     <file name="Daemon.js" path="C:\mycode\Netology\сайты\-ArrayBuffer--Task_1\src\js\Daemon.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="Magician.js" path="C:\mycode\Netology\сайты\-ArrayBuffer--Task_1\src\js\Magician.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="5" count="1" type="stmt"/>
       <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
     </file>
     <file name="MathCalc.js" path="C:\mycode\Netology\сайты\-ArrayBuffer--Task_1\src\js\MathCalc.js">
-      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
       <line num="4" count="5" type="stmt"/>
       <line num="5" count="5" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="13" count="7" type="stmt"/>
-      <line num="17" count="3" type="stmt"/>
-      <line num="21" count="7" type="stmt"/>
-      <line num="22" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="23" count="1" type="stmt"/>
-      <line num="26" count="7" type="cond" truecount="2" falsecount="0"/>
-      <line num="27" count="2" type="stmt"/>
-      <line num="28" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="29" count="2" type="stmt"/>
-      <line num="31" count="3" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
+      <line num="12" count="8" type="stmt"/>
+      <line num="16" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="17" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
